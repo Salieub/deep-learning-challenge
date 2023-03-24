@@ -1,0 +1,38 @@
+Analysis: Deep Learning model for AlphabetSoup data
+
+Overview
+This report the steps for creating and optimizing a deep learning neural network to create a binary classification model that can predict if an Alphabet Soup-funded organization will be successful based on the features in the dataset. 
+
+Data Pre-processing
+
+The target for the model is the column titled ‘Is_successful’. All variables, aside from the EIN and NAME columns, are features for the model. The columns EIN and NAME were dropped as they are neither targets nor features. 
+
+Compiling, Training, and Evaluating the Model
+
+I wanted to use keras-tuner to find the best parameters for optimising the model, however the size of the dataset made that option difficult to achieve. I tried best practice recommendations for hyperparameters, begining with simple models and then increasing complexity.
+
+Best practice: 
+• 2-4 hidden layers
+• 2-3 neurons per feature
+• Sigmoid activation function for the outer layer and more complex activation functions (relu, 
+tanh) for the hidden layers
+• Minimum 100 Epochs
+
+The first model had two layers, 2 neurons per input dimension (88 neurons in the first layer), 100 
+Epochs. 
+
+Model 2: 
+
+In this attempt, I tried to load the same model with the best weights for accuracy to see how this function 
+works. There was no improvement in performance
+
+
+Model 3: Add third hidden layer.
+Model 4: Add fourth hidden layer, increase epochs to 200.
+Model 5: Add fifth hidden layer, increase epochs to 200, include sigmoid, relu and tanh activation 
+functions.
+
+There was no improvement with any of these models and I was not able to achieve the target 
+performance
+
+ 
